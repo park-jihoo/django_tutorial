@@ -1,4 +1,8 @@
-<!DOCTYPE html>
-<html lang = "en">
-<head></head>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="저장"/>
+    </form>
+{% endblock %}
